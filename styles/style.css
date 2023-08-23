@@ -16,7 +16,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Fira Sans Condensed",Arial, sans-serif ;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -88,12 +88,9 @@ ol {
 }
 
 .search-form__label:not(:last-child) {
-  padding-inline-end: 15px;
+  margin-inline-end: 15px;
 }
 
-/* .search-form__label:hover {
-  text-decoration: underline;
-} */
 
 .search-form__label:focus {
   outline: none;
@@ -114,7 +111,7 @@ ol {
   position: relative;
 }
 
-input[type='checkbox']:checked + span::before {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   content: '';
   position: absolute;
   inset: 1px;
@@ -198,9 +195,6 @@ input[type='checkbox']:focus-visible + span {
   display: flex;
 }
 
-.content__card-link:hover {
-  text-decoration: underline;
-}
 
 .search-form__label:focus-visible {
   outline: 1px solid rgba(255, 255, 255, 1);
@@ -232,15 +226,16 @@ input[type='checkbox']:focus-visible + span {
   display: block;
   text-decoration: none;
   color: rgba(255, 255, 255, 1);
+  outline-offset: -1px;
 }
 
 .content__card-link:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .content__card-link:active {
   background-color: rgba(84, 80, 80, 1);
-  text-decoration: none;
 }
 
 .content__card-link:focus {
